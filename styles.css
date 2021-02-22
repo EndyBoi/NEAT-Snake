@@ -3,29 +3,44 @@ body {
 	font-family: 'Poppins', sans-serif;
 	margin: 0;
 	padding: 0;
-	background: #fff;
+	background: #eceff1;
+	color: #263238;
 }
-.container {
-	width: 1030px;
+#container {
+	width: 1024px;
 	margin: 0 auto;
 }
-.chart,
-.status {
+#chart,
+#status {
 	float: left;
 }
-.chart {
+#chart {
 	width: 600px;
 }
-.status {
+#status {
 	width: 430px;
 	height: 322px;
 }
-.status p {
+#status p {
 	margin-top: 50px;
 	text-align: center;
 	font-size: 2em;
 }
+.row {
+	display: flex;
+}
+.column1 {
+	flex: 70%;
+	height: 250px;
+}
+.column2 {
+	flex: 30%;
+	height: 250px;
+}
 canvas {
-	border: 1px solid #eee;
-	margin: 0 1px 1px 0;
+	border: 1px solid #b0bec5;
+	margin: 5px 0.5px 0.5px 10px;
+	border-radius: 4px;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px,
+		rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
 }
