@@ -1,13 +1,9 @@
 # Snake Running NEAT Algorithm
 
-```sh
-If you can see this message the project is incomplete
-```
-
-This is an experiment using neural networks with genetic algorithms to play a game of snake.
+This is an experiment using neural networks with genetic algorithms to play a game of snake. With the goal was to make the entire project as minimal as possible when it came to use of libraries. There is still more work to be done in optimisation of the AI's neural networks.
 
 ## Libraries used and minified
 
-- **[p5.js](https://p5js.org/):** Was used for graphics and animations
-- **[Frappe Charts](https://frappe.github.io/charts/):** Was used for the graph showing the evolution score history
-- **[Neataptic](https://wagenaartje.github.io/neataptic/):** Was used for the main brain offering neural network and neuro-evolutions
+- **p5.js:** Processing for JavaScript
+- **Frappe Charts:** Chart for plotting evolutionary graph
+- **Neataptic:** Simple lightweight NEAT algorithm to handle the AI
