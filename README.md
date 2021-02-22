@@ -1,9 +1,5 @@
 # Snake Running NEAT Algorithm
 
-```sh
-If you can see this message the project is incomplete
-```
-
 This is an experiment using neural networks with genetic algorithms to play a game of snake.
 
 ## Libraries used and minified
