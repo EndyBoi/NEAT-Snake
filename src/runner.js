@@ -48,11 +48,28 @@ class Runner {
 
 		this.neat.sort()
 
+		var mostEat = 0
+		var minEaten = 1000000
+		var avgEaten = 0
+
+		for (let i = 0; i < this.games.length; i++) {
+			avgEaten = avgEaten + this.games[i].snake.foodNumber
+			if (this.games[i].snake.foodNumber > mostEat) {
+				mostEat = this.games[i].snake.foodNumber
+			}
+			if (this.games[i].snake.foodNumber < minEaten) {
+				minEaten = this.games[i].snake.foodNumber
+			}
+		}
+		avgEaten = avgEaten / this.games.length
+
 		this.onEndGeneration({
 			generation: this.neat.generation,
 			max: this.neat.getFittest().score,
 			avg: Math.round(this.neat.getAverage()),
 			min: this.neat.population[this.neat.popsize - 1].score,
+			network: this.neat.getFittest(),
+			mostEat: mostEat,
 		})
 
 		const newGeneration = []

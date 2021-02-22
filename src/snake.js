@@ -1,15 +1,16 @@
 class Snake {
 	constructor(score) {
 		this.scoreModifiers = score
+		this.foodNumber = 0
 	}
 
 	reset() {
 		this.segments = [
 			[1, 1],
-			[2, 1],
-			[3, 1],
-			[4, 1],
-			[5, 1],
+			[1, 2],
+			[1, 3],
+			[1, 4],
+			[1, 5],
 		]
 		this.direction = 'right'
 		this.isEating = false
@@ -34,7 +35,8 @@ class Snake {
 				if (game.food.position[0] < head[0]) isFoodLeft = 1
 				if (game.food.position[0] > head[0]) isFoodRight = 1
 				this.segments.forEach((s) => {
-					if (head[0] === s[0] && head[1] - 1 === s[1]) canMoveForward = 0
+					// if (head[0] === s[0] && head[1] - 1 === s[1]) canMoveForward = 0
+					if (head[0] === s[0] && head[1] - 1 === s[1]) canMoveForward = -1
 					if (head[0] - 1 === s[0] && head[1] === s[1]) canMoveLeft = 0
 					if (head[0] + 1 === s[0] && head[1] === s[1]) canMoveRight = 0
 				})
@@ -47,7 +49,8 @@ class Snake {
 				if (game.food.position[0] < head[0]) isFoodRight = 1
 				if (game.food.position[0] > head[0]) isFoodLeft = 1
 				this.segments.forEach((s) => {
-					if (head[0] === s[0] && head[1] + 1 === s[1]) canMoveForward = 0
+					// if (head[0] === s[0] && head[1] + 1 === s[1]) canMoveForward = 0
+					if (head[0] === s[0] && head[1] + 1 === s[1]) canMoveForward = -1
 					if (head[0] + 1 === s[0] && head[1] === s[1]) canMoveLeft = 0
 					if (head[0] - 1 === s[0] && head[1] === s[1]) canMoveRight = 0
 				})
@@ -60,7 +63,8 @@ class Snake {
 				if (game.food.position[1] < head[1]) isFoodRight = 1
 				if (game.food.position[1] > head[1]) isFoodLeft = 1
 				this.segments.forEach((s) => {
-					if (head[1] === s[1] && head[0] - 1 === s[0]) canMoveForward = 0
+					// if (head[1] === s[1] && head[0] - 1 === s[0]) canMoveForward = 0
+					if (head[1] === s[1] && head[0] - 1 === s[0]) canMoveForward = -1
 					if (head[1] + 1 === s[1] && head[0] === s[0]) canMoveLeft = 0
 					if (head[1] - 1 === s[1] && head[0] === s[0]) canMoveRight = 0
 				})
@@ -73,7 +77,8 @@ class Snake {
 				if (game.food.position[1] < head[1]) isFoodLeft = 1
 				if (game.food.position[1] > head[1]) isFoodRight = 1
 				this.segments.forEach((s) => {
-					if (head[1] === s[1] && head[0] + 1 === s[0]) canMoveForward = 0
+					// if (head[1] === s[1] && head[0] + 1 === s[0]) canMoveForward = 0
+					if (head[1] === s[1] && head[0] + 1 === s[0]) canMoveForward = -1
 					if (head[1] - 1 === s[1] && head[0] === s[0]) canMoveLeft = 0
 					if (head[1] + 1 === s[1] && head[0] === s[0]) canMoveRight = 0
 				})
@@ -183,6 +188,7 @@ class Snake {
 			game.food.position[1] === head[1]
 		) {
 			this.isEating = true
+			this.foodNumber++
 			this.brain.score += this.scoreModifiers.ateFood
 		}
 	}

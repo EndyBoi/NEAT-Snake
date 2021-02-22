@@ -15,27 +15,29 @@ body {
 	float: left;
 }
 #chart {
-	width: 600px;
+	width: 1000px;
 }
 #status {
-	width: 430px;
-	height: 322px;
+	width: 400px;
+	height: 250x;
 }
 #status p {
-	margin-top: 50px;
+	margin-top: 8%;
 	text-align: center;
-	font-size: 2em;
+	font-size: 1.4em;
+	/* display: inline; */
 }
 .row {
 	display: flex;
 }
 .column1 {
-	flex: 70%;
+	/* flex: 1000px; */
 	height: 250px;
 }
 .column2 {
 	flex: 30%;
-	height: 250px;
+	/* height: 100px; */
+	padding: 25px;
 }
 canvas {
 	border: 1px solid #b0bec5;

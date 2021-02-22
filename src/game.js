@@ -43,7 +43,7 @@ class Game {
 				)
 			}
 			p.drawSnake = () => {
-				p.fill('#263238')
+				p.fill('rgba(0,0,0,.75)')
 				game.snake.segments.forEach((s) => {
 					p.rect(
 						s[0] * game.unit - game.unit,
