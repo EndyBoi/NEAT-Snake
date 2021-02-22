@@ -49,7 +49,7 @@ class Runner {
 		this.neat.sort()
 
 		var mostEat = 0
-		var minEaten = 1000000
+		var minEaten = 10000000
 		var avgEaten = 0
 
 		for (let i = 0; i < this.games.length; i++) {

@@ -2,9 +2,9 @@
 const GAMES = 50
 const GAME_SIZE = 200
 const GAME_UNIT = 5
-const FRAME_RATE = 120
+const FRAME_RATE = 145
 // This is to prevent endless loops
-const MAX_TURNS = 6000
+const MAX_TURNS = 609609
 const LOWEST_SCORE_ALLOWED = -50
 
 // NEAT Settings
