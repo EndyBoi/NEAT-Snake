@@ -1,17 +1,16 @@
 const Neat = neataptic.Neat
 const Config = neataptic.Config
-var Node = neataptic.Node
-var Network = neataptic.Network
-var Methods = neataptic.Methods
-var Architect = neataptic.Architect
+const Node = neataptic.Node
+const Methods = neataptic.Methods
 
 Config.warnings = false
 
-const neat = new Neat(8, 2, null, {
+const neat = new Neat(8, 8, null, {
 	popsize: GAMES,
 	elitism: ELITISM,
 	mutationRate: MUTATION_RATE,
 	mutationAmount: MUTATION_AMOUNT,
+	// mutation: [MOD_BIAS, ADD_NODE],
 })
 
 const chartData = {
