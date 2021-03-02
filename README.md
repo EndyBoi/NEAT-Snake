@@ -1,9 +1,7 @@
 # Snake Running NEAT Algorithm
 
-This is an experiment using neural networks with genetic algorithms to play a game of snake. With the goal was to make the entire project as minimal as possible when it came to use of libraries. There is still more work to be done in optimisation of the AI's neural networks.
+<b>N</b>euro<b>E</b>volution of <b>A</b>ugmenting <b>T</b>opologies (NEAT), is a form of artificial intelligence that I chose for this particular project mostly due to the inspiration from a far more <a href="https://github.com/Code-Bullet/SnakeFusion">extensive project</a> done in Processing though this developer being one of the main inspirations into machine learning.
 
-## Libraries used and minified
+## >><a href="https://endyboi.github.io/NEAT-Snake/"> Snake is Deployed here </a><<
 
-- **p5.js:** Processing for JavaScript
-- **Frappe Charts:** Chart for plotting evolutionary graph
-- **Neataptic:** Simple lightweight NEAT algorithm to handle the AI
+While the AI will play the game it will reach a point of mastery that will not end in a true win for the game. I feel it may be a limitation of myself as a coder or the simplicity in the implementation. Another option would be to pursue the <a href="https://en.wikipedia.org/wiki/Hamiltonian_path">Hamilton cycle</a> but I feel that would be less about learning to play the game rather than just solving the game perfectly.
